@@ -24,7 +24,6 @@ public class DeckTest {
     public void getCards_instanceContainsInitializedList_true() {
         Deck testDeck = new Deck();
         assertEquals( true, testDeck.getCards() instanceof ArrayList);
-
     }
 
     @Test
@@ -55,14 +54,13 @@ public class DeckTest {
     public void getCards_deckIsOrderedByValue_true() {
         Deck testDeck = new Deck();
         testDeck.sortCards();
-        // sublist method returns List type
+
+        // using subList() returns List
         List<Card> sample = testDeck.getCards().subList( 0, 4);
         List<String> foundFirstFour = new ArrayList();
-
         for (int i = 0; i < sample.size() ; i++) {
             foundFirstFour.add( sample.get(i).getValue() );
         }
-
         List<String> expectedFirstFour = Arrays.asList("Ace", "Ace", "Ace", "Ace");
 
         assertEquals( foundFirstFour, expectedFirstFour);
