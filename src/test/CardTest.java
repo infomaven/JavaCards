@@ -34,4 +34,5 @@ public class CardTest {
         Card testCard = new Card("Spades", "Ace");
         assertEquals( "Ace of Spades", testCard.getName());
     }
+
 }

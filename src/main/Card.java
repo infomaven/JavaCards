@@ -72,11 +72,11 @@ public class Card implements Comparable<Card> {
     }
 
     @Override
-    public int compareTo(Card firstCard) {
+    public int compareTo(Card comparedCard) {
 
-        int firstValue = ((Card) firstCard).getRank( firstCard.getValue() );
+        int comparedValue = ((Card) comparedCard).getRank( comparedCard.getValue() );
 
-        // ascending order of values
-        return this.getRank( this.getValue()) - firstValue;
+        // Comparable supports just one sort order at a time. In this case we are using ASC rank value
+        return this.getRank( this.getValue()) - comparedValue;
     }
 }

@@ -1,6 +1,8 @@
 package main;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * A Deck contains 52 cards. No jokers are included. Aces are low.
@@ -30,6 +32,11 @@ public class Deck  {
 
     public void sortCards() {
         Collections.sort( (List) cards);
+
+    }
+
+    public void shuffle() {
+        Collections.shuffle( (List) cards );
 
     }
 }
