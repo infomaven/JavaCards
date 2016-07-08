@@ -13,7 +13,7 @@
      * Utility method. Returns TRUE if 2 Lists have matching elements
      */
     public class DeckTest {
-        private boolean listsAreMatching(List<Card> prevList, List<Card> modList) {
+        private boolean verifyListMatch(List<Card> prevList, List<Card> modList) {
             if (prevList.size() == modList.size()) {
                 for (Card p : prevList) {
                     for (Card m : modList) {
@@ -66,8 +66,9 @@
     }
 
         @Test
-        public void getCards_deckIsOrderedByValue_true() {
+        public void getCards_sortIsByAscValue_true() {
             Deck testDeck = new Deck();
+
             testDeck.sortCards();
             // taking a "slice" from AL in Java returns List type, so we must adapt
             List<Card> sample = testDeck.getCards().subList( 0, 4);
@@ -81,7 +82,6 @@
             }
 
 
-        // todo: create test for shuffle
         @Test
         public void getCards_shuffleChangesDeckOrder() {
             Deck testDeck = new Deck();
@@ -105,7 +105,7 @@
             Card randShuffled1 = testDeck.getCards().get(random1);
             Card randShuffled2 = testDeck.getCards().get( random2 );
             List<Card> sampleAfter = Arrays.asList(firstShuffled, lastShuffled, randShuffled1, randShuffled2);
-            boolean comparison = listsAreMatching( sampleBefore, sampleAfter);
+            boolean comparison = verifyListMatch(sampleBefore, sampleAfter);
 
             assertFalse( comparison );
         }

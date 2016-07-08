@@ -30,6 +30,7 @@ public class Deck  {
     }
 
 
+    // REFACTOR: modify method to use fixed suit sequence when sorting the card values
     public void sortCards() {
         Collections.sort( (List) cards);
 

@@ -51,26 +51,11 @@ public class Card implements Comparable<Card> {
         return rank;
     }
 
-    @Override
-    public int hashCode() {
-        int hashCode = 1;
-
-        hashCode = hashCode * 17 + this.cardSuit.hashCode();
-        hashCode = hashCode * 31 + this.cardValue.hashCode();
-        return hashCode;
-    }
-
-
-    @Override
-    public boolean equals( Object other ) {
-
-        if (!(other instanceof Card)) {
-            return false;
-        }
-        Card that = (Card) other;
-        return this.cardSuit.equals( that.cardSuit)&& this.cardValue.equals( that.cardValue);
-    }
-
+    /**
+     * Sorts Cards according to rank ascending
+     * @param comparedCard
+     * @return
+     */
     @Override
     public int compareTo(Card comparedCard) {
 
