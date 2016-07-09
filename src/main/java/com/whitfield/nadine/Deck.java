@@ -30,14 +30,20 @@ public class Deck  {
     }
 
 
-    // REFACTOR: modify method to use fixed suit sequence when sorting the card values
+    // REFACTOR: modify method to use same order of suits every time the deck is sorted
     public void sortCards() {
-        Collections.sort( (List) cards);
+        if (cards.size() == 52 )
+            Collections.sort( (List) cards);
+        else
+            throw new IllegalArgumentException( "Deck is not standard size");
 
     }
 
     public void shuffle() {
-        Collections.shuffle( (List) cards );
+        if (cards.size() == 52 )
+            Collections.shuffle( (List) cards );
+        else
+            throw new IllegalArgumentException( "Deck is not standard size");
 
     }
 }

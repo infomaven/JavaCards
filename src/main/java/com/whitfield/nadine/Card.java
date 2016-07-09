@@ -60,7 +60,7 @@ public class Card implements Comparable<Card> {
 
         int comparedValue = ((Card) comparedCard).getRank( comparedCard.getValue() );
 
-        // Comparable supports just one sort order at a time. In this case we are using ASC rank value
+        // support for ASC sort by card value. To sort by multiple criteria, change class to use Comparator interface
         return this.getRank( this.getValue()) - comparedValue;
     }
 }
