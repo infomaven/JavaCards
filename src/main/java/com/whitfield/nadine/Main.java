@@ -1,4 +1,4 @@
-package main;
+package com.whitfield.nadine;
 
 /**
  * Created by nadine on 7/6/16.

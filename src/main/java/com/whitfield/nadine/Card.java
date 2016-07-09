@@ -1,4 +1,4 @@
-package main;
+package com.whitfield.nadine;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -56,7 +56,6 @@ public class Card implements Comparable<Card> {
      * @param comparedCard
      * @return
      */
-    @Override
     public int compareTo(Card comparedCard) {
 
         int comparedValue = ((Card) comparedCard).getRank( comparedCard.getValue() );

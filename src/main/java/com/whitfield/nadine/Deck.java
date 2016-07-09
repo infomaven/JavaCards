@@ -1,4 +1,4 @@
-package main;
+package com.whitfield.nadine;
 
 import java.util.ArrayList;
 import java.util.Collections;

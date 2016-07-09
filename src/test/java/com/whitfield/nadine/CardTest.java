@@ -1,6 +1,5 @@
-package test;
+package com.whitfield.nadine;
 
-import main.Card;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
